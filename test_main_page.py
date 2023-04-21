@@ -1,5 +1,3 @@
-import time
-from selenium.webdriver.common.by import By
 from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 
@@ -15,15 +13,10 @@ def test_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
     page = LoginPage(browser, link)  # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
     page.open()  # открываем страницу
-    page.should_be_login_page() # выполняем метод страницы
+    page.should_be_login_page()  # выполняем метод страницы
 
-
-
-
-
-
-
-
+# команды
+# pytest -s -v --tb=line --language=en test_main_page.py
 
 
 # def test_guest_should_see_login_link(browser):
